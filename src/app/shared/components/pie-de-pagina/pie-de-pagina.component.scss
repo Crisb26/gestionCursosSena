@@ -1,0 +1,33 @@
+.pie-pagina {
+  background-color: #2c3e50;
+  color: white;
+  padding: 2rem 0;
+  margin-top: auto;
+
+  .contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+
+    .seccion-enlaces {
+      margin-bottom: 1rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        padding: 0.5rem;
+
+        &:hover {
+          color: #3498db;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  }
+}

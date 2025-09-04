@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+
+<main class="contenido-principal">
+  <section class="seccion-bienvenida">
+    <div class="contenedor-contenido">
+      <img src="./assets/logo-sena.png" alt="Logo SENA" class="logo-sena">
+      <h1>{{ mensajeBienvenida }}</h1>
+      
+      <div class="estadisticas">
+        <div class="tarjeta-estadistica">
+          <h3>{{ numeroUsuariosActivos }}</h3>
+          <p>Usuarios Activos</p>
+        </div>
+        <div class="tarjeta-estadistica">
+          <h3>{{ cursosDisponibles }}</h3>
+          <p>Cursos Disponibles</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-pie-de-pagina></app-pie-de-pagina>

@@ -1,0 +1,200 @@
+.contenido-principal {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+
+  .seccion-perfil {
+    .contenedor-contenido {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+
+      h1 {
+        color: #00492e;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .contenido-perfil {
+        display: grid;
+        gap: 2rem;
+
+        .tarjeta-seccion {
+          background: white;
+          border-radius: 15px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          padding: 2rem;
+
+          .encabezado-seccion {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            h2 {
+              color: #00492e;
+              margin: 0;
+            }
+
+            .boton-editar {
+              background-color: #17a2b8;
+              color: white;
+              border: none;
+              padding: 0.5rem 1rem;
+              border-radius: 5px;
+              cursor: pointer;
+              transition: background-color 0.3s;
+
+              &:hover {
+                background-color: #138496;
+              }
+            }
+          }
+
+          .datos-personales {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+
+            .campo-datos {
+              label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+                color: #333;
+              }
+
+              input {
+                width: 100%;
+                padding: 0.75rem;
+                border: 2px solid #ddd;
+                border-radius: 5px;
+                font-size: 1rem;
+
+                &[readonly] {
+                  background-color: #f8f9fa;
+                  cursor: default;
+                }
+
+                &:not([readonly]):focus {
+                  border-color: #00492e;
+                  outline: none;
+                }
+              }
+            }
+          }
+
+          .botones-edicion {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+
+            button {
+              padding: 0.75rem 1.5rem;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              font-size: 1rem;
+              transition: all 0.3s;
+            }
+
+            .boton-guardar {
+              background-color: #28a745;
+              color: white;
+
+              &:hover {
+                background-color: #218838;
+              }
+            }
+
+            .boton-cancelar {
+              background-color: #dc3545;
+              color: white;
+
+              &:hover {
+                background-color: #c82333;
+              }
+            }
+          }
+
+          .lista-cursos {
+            .curso-item {
+              border: 1px solid #eee;
+              border-radius: 10px;
+              padding: 1.5rem;
+              margin-bottom: 1rem;
+              transition: transform 0.3s;
+
+              &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              }
+
+              .info-curso {
+                margin-bottom: 1rem;
+
+                h3 {
+                  color: #00492e;
+                  margin: 0 0 0.5rem 0;
+                }
+
+                .detalles-curso {
+                  display: flex;
+                  gap: 1rem;
+
+                  .estado-curso {
+                    padding: 0.25rem 0.75rem;
+                    border-radius: 15px;
+                    font-size: 0.8rem;
+                    
+                    &.en-progreso {
+                      background-color: #fff3cd;
+                      color: #856404;
+                    }
+                    
+                    &.completado {
+                      background-color: #d4edda;
+                      color: #155724;
+                    }
+                  }
+
+                  .fecha-inicio {
+                    color: #666;
+                    font-size: 0.9rem;
+                  }
+                }
+              }
+
+              .progreso-curso {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .barra-progreso {
+                  flex: 1;
+                  height: 8px;
+                  background-color: #e9ecef;
+                  border-radius: 4px;
+                  overflow: hidden;
+
+                  .relleno-progreso {
+                    height: 100%;
+                    background-color: #00492e;
+                    transition: width 0.5s ease;
+                  }
+                }
+
+                .porcentaje-progreso {
+                  font-weight: bold;
+                  color: #00492e;
+                  min-width: 45px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

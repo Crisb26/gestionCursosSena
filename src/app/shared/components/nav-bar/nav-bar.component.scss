@@ -1,0 +1,36 @@
+.barra-navegacion {
+  background-color: #00492e;
+  color: white;
+  padding: 1rem 0;
+
+  .contenedor-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    h2 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .enlaces-navegacion {
+      display: flex;
+      gap: 2rem;
+
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+
+        &:hover, &.activo {
+          background-color: #006837;
+        }
+      }
+    }
+  }
+}

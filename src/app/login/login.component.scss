@@ -1,0 +1,137 @@
+.contenido-principal {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+  .seccion-login {
+    width: 100%;
+
+    .contenedor-login {
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 0 2rem;
+
+      .tarjeta-login {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        overflow: hidden;
+
+        .encabezado-login {
+          background-color: #00492e;
+          color: white;
+          text-align: center;
+          padding: 2rem;
+
+          h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+          }
+
+          p {
+            margin: 0;
+            opacity: 0.9;
+          }
+        }
+
+        .formulario-login {
+          padding: 2rem;
+
+          .grupo-campo {
+            margin-bottom: 1.5rem;
+
+            label {
+              display: block;
+              margin-bottom: 0.5rem;
+              font-weight: bold;
+              color: #333;
+            }
+
+            input {
+              width: 100%;
+              padding: 1rem;
+              border: 2px solid #ddd;
+              border-radius: 8px;
+              font-size: 1rem;
+              transition: border-color 0.3s;
+
+              &:focus {
+                border-color: #00492e;
+                outline: none;
+              }
+
+              &::placeholder {
+                color: #999;
+              }
+            }
+          }
+
+          .mensaje-error {
+            background-color: #ffe6e6;
+            color: #d63031;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #d63031;
+          }
+
+          .botones-formulario {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+
+            .boton-login, .boton-limpiar {
+              flex: 1;
+              padding: 1rem;
+              border: none;
+              border-radius: 8px;
+              font-size: 1rem;
+              cursor: pointer;
+              transition: all 0.3s;
+            }
+
+            .boton-login {
+              background-color: #00492e;
+              color: white;
+
+              &:hover:not(:disabled) {
+                background-color: #006837;
+              }
+
+              &:disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+              }
+            }
+
+            .boton-limpiar {
+              background-color: #6c757d;
+              color: white;
+
+              &:hover {
+                background-color: #5a6268;
+              }
+            }
+          }
+
+          .enlaces-adicionales {
+            text-align: center;
+
+            a {
+              display: block;
+              margin-bottom: 0.5rem;
+              color: #00492e;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

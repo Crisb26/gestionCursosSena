@@ -1,0 +1,25 @@
+<app-nav-bar></app-nav-bar>
+
+<main class="contenido-principal">
+  <section class="seccion-cursos">
+    <div class="contenedor-contenido">
+      <h1>Cursos Disponibles</h1>
+      
+      <div class="grid-cursos">
+        <div class="tarjeta-curso" *ngFor="let curso of cursos">
+          <img [src]="curso.imagen" [alt]="curso.titulo" class="imagen-curso">
+          <div class="contenido-tarjeta">
+            <h3>{{ curso.titulo }}</h3>
+            <p>{{ curso.descripcion }}</p>
+            <div class="info-curso">
+              <span class="duracion">Duración: {{ curso.duracion }}</span>
+              <button class="boton-inscribir">Inscribirse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-pie-de-pagina></app-pie-de-pagina>

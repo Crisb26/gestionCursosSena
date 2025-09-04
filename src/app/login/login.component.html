@@ -1,0 +1,70 @@
+<app-nav-bar></app-nav-bar>
+
+<main class="contenido-principal">
+  <section class="seccion-login">
+    <div class="contenedor-login">
+      <div class="tarjeta-login">
+        <div class="encabezado-login">
+          <h1>Iniciar Sesión</h1>
+          <p>Accede a tu cuenta del SENA</p>
+        </div>
+
+        <form class="formulario-login" (ngSubmit)="iniciarSesion()">
+          <div class="grupo-campo">
+            <label for="email">Correo Electrónico</label>
+            <input 
+              type="email" 
+              id="email"
+              name="email"
+              [(ngModel)]="datosUsuario.email"
+              placeholder="tu-email@sena.edu.co"
+              required
+            >
+          </div>
+
+          <div class="grupo-campo">
+            <label for="contrasena">Contraseña</label>
+            <input 
+              type="password" 
+              id="contrasena"
+              name="contrasena"
+              [(ngModel)]="datosUsuario.contrasena"
+              placeholder="Tu contraseña"
+              required
+            >
+          </div>
+
+          <div class="mensaje-error" *ngIf="mensajeError">
+            {{ mensajeError }}
+          </div>
+
+          <div class="botones-formulario">
+            <button 
+              type="submit" 
+              class="boton-login"
+              [disabled]="cargando"
+            >
+              <span *ngIf="!cargando">Iniciar Sesión</span>
+              <span *ngIf="cargando">Verificando...</span>
+            </button>
+
+            <button 
+              type="button" 
+              class="boton-limpiar"
+              (click)="limpiarFormulario()"
+            >
+              Limpiar
+            </button>
+          </div>
+
+          <div class="enlaces-adicionales">
+            <a href="#recuperar">¿Olvidaste tu contraseña?</a>
+            <a routerLink="/perfil">¿No tienes cuenta? Regístrate</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-pie-de-pagina></app-pie-de-pagina>

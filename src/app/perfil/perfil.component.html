@@ -1,0 +1,123 @@
+<app-nav-bar></app-nav-bar>
+
+<main class="contenido-principal">
+  <section class="seccion-perfil">
+    <div class="contenedor-contenido">
+      <h1>Mi Perfil</h1>
+      
+      <div class="contenido-perfil">
+        <!-- Informacion Personal -->
+        <div class="tarjeta-seccion">
+          <div class="encabezado-seccion">
+            <h2>Información Personal</h2>
+            <button 
+              class="boton-editar" 
+              *ngIf="!modoEdicion"
+              (click)="activarEdicion()"
+            >
+              ✏️ Editar
+            </button>
+          </div>
+
+          <div class="datos-personales">
+            <div class="campo-datos">
+              <label>Nombre:</label>
+              <input 
+                type="text" 
+                [(ngModel)]="perfilUsuario.nombre"
+                [readonly]="!modoEdicion"
+              >
+            </div>
+
+            <div class="campo-datos">
+              <label>Apellido:</label>
+              <input 
+                type="text" 
+                [(ngModel)]="perfilUsuario.apellido"
+                [readonly]="!modoEdicion"
+              >
+            </div>
+
+            <div class="campo-datos">
+              <label>Email:</label>
+              <input 
+                type="email" 
+                [(ngModel)]="perfilUsuario.email"
+                [readonly]="!modoEdicion"
+              >
+            </div>
+
+            <div class="campo-datos">
+              <label>Documento:</label>
+              <input 
+                type="text" 
+                [(ngModel)]="perfilUsuario.documento"
+                [readonly]="!modoEdicion"
+              >
+            </div>
+
+            <div class="campo-datos">
+              <label>Teléfono:</label>
+              <input 
+                type="tel" 
+                [(ngModel)]="perfilUsuario.telefono"
+                [readonly]="!modoEdicion"
+              >
+            </div>
+
+            <div class="campo-datos">
+              <label>Fecha de Nacimiento:</label>
+              <input 
+                type="date" 
+                [(ngModel)]="perfilUsuario.fechaNacimiento"
+                [readonly]="!modoEdicion"
+              >
+            </div>
+          </div>
+
+          <div class="botones-edicion" *ngIf="modoEdicion">
+            <button class="boton-guardar" (click)="guardarCambios()">
+              💾 Guardar
+            </button>
+            <button class="boton-cancelar" (click)="cancelarEdicion()">
+              ❌ Cancelar
+            </button>
+          </div>
+        </div>
+
+        <!-- todos los cursos inscritos -->
+        <div class="tarjeta-seccion">
+          <h2>Mis Cursos</h2>
+          
+          <div class="lista-cursos">
+            <div class="curso-item" *ngFor="let curso of cursosInscritos">
+              <div class="info-curso">
+                <h3>{{ curso.nombre }}</h3>
+                <div class="detalles-curso">
+                  <span class="estado-curso" [class]="curso.estado.toLowerCase().replace(' ', '-')">
+                    {{ curso.estado }}
+                  </span>
+                  <span class="fecha-inicio">
+                    Inicio: {{ curso.fechaInicio | date:'dd/MM/yyyy' }}
+                  </span>
+                </div>
+              </div>
+              
+              <div class="progreso-curso">
+                <div class="barra-progreso">
+                  <div 
+                    class="relleno-progreso" 
+                    [style.width.%]="curso.progreso"
+                  ></div>
+                </div>
+                <span class="porcentaje-progreso">{{ curso.progreso }}%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-pie-de-pagina></app-pie-de-pagina>

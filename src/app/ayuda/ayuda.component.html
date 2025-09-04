@@ -1,0 +1,50 @@
+<app-nav-bar></app-nav-bar>
+
+<main class="contenido-principal">
+  <section class="seccion-ayuda">
+    <div class="contenedor-contenido">
+      <h1>Centro de Ayuda</h1>
+      
+      <div class="contenido-ayuda">
+        <div class="seccion-preguntas">
+          <h2>Preguntas Frecuentes</h2>
+          <div class="lista-preguntas">
+            <div class="pregunta-item" *ngFor="let item of preguntasFrecuentes">
+              <h3>{{ item.pregunta }}</h3>
+              <p>{{ item.respuesta }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="seccion-contacto">
+          <h2>Contactar Soporte</h2>
+          <div class="info-contacto">
+            <div class="contacto-item">
+              <span class="icono">📞</span>
+              <div>
+                <strong>Teléfono:</strong>
+                <p>{{ contactoSoporte.telefono }}</p>
+              </div>
+            </div>
+            <div class="contacto-item">
+              <span class="icono">✉️</span>
+              <div>
+                <strong>Email:</strong>
+                <p>{{ contactoSoporte.email }}</p>
+              </div>
+            </div>
+            <div class="contacto-item">
+              <span class="icono">🕐</span>
+              <div>
+                <strong>Horarios:</strong>
+                <p>{{ contactoSoporte.horarios }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-pie-de-pagina></app-pie-de-pagina>

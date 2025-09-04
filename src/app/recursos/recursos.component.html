@@ -1,0 +1,24 @@
+<app-nav-bar></app-nav-bar>
+
+<main class="contenido-principal">
+  <section class="seccion-recursos">
+    <div class="contenedor-contenido">
+      <h1>Recursos de Apoyo</h1>
+      <p class="descripcion-seccion">Materiales y documentos para complementar tu aprendizaje</p>
+      
+      <div class="lista-recursos">
+        <div class="tarjeta-recurso" *ngFor="let recurso of recursos">
+          <div class="icono-recurso">{{ recurso.icono }}</div>
+          <div class="contenido-recurso">
+            <h3>{{ recurso.nombre }}</h3>
+            <span class="tipo-recurso">{{ recurso.tipo }}</span>
+            <p>{{ recurso.descripcion }}</p>
+            <button class="boton-descargar">Acceder</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-pie-de-pagina></app-pie-de-pagina>

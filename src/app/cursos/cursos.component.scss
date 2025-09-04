@@ -1,0 +1,83 @@
+.contenido-principal {
+  min-height: calc(100vh - 200px);
+  padding: 2rem 0;
+
+  .seccion-cursos {
+    .contenedor-contenido {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+
+      h1 {
+        color: #00492e;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .grid-cursos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+
+        .tarjeta-curso {
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          overflow: hidden;
+          transition: transform 0.3s;
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+
+          .imagen-curso {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+
+          .contenido-tarjeta {
+            padding: 1.5rem;
+
+            h3 {
+              color: #00492e;
+              margin-bottom: 1rem;
+            }
+
+            p {
+              color: #666;
+              margin-bottom: 1.5rem;
+              line-height: 1.5;
+            }
+
+            .info-curso {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .duracion {
+                font-size: 0.9rem;
+                color: #888;
+              }
+
+              .boton-inscribir {
+                background-color: #00492e;
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                  background-color: #006837;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

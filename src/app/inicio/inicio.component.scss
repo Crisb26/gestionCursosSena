@@ -1,0 +1,54 @@
+.contenido-principal {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+
+  .seccion-bienvenida {
+    width: 100%;
+    text-align: center;
+    padding: 4rem 2rem;
+
+    .contenedor-contenido {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .logo-sena {
+        width: 150px;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        color: #00492e;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .estadisticas {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 2rem;
+
+        .tarjeta-estadistica {
+          background: white;
+          padding: 2rem;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          min-width: 150px;
+
+          h3 {
+            color: #00492e;
+            font-size: 2rem;
+            margin: 0 0 0.5rem 0;
+          }
+
+          p {
+            margin: 0;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}
