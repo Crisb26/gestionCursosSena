@@ -8,5 +8,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
-  tituloPlataforma = 'Gestión Cursos SENA';
+  tituloPlataforma = 'Plataforma de Gestion de Cursos SENA GALAN';
 }

@@ -13,30 +13,30 @@ export class RecursosComponent {
   recursos = [
     {
       id: 1,
-      nombre: 'Guía de Angular',
+      nombre: 'Guia de Angular',
       tipo: 'PDF',
-      descripcion: 'Documentación completa sobre Angular para principiantes',
+      descripcion: 'esta es una documentacion completa sobre Angular para principiantes',
       icono: '📄'
     },
     {
       id: 2,
-      nombre: 'Video Tutoriales HTML/CSS',
+      nombre: 'Video Tutoriales HTML y CSS',
       tipo: 'Video',
-      descripcion: 'Serie de videos para aprender HTML y CSS desde cero',
+      descripcion: 'al ingresar encontraras una serie de videos para aprender HTML y CSS desde cero',
       icono: '🎥'
     },
     {
       id: 3,
       nombre: 'Ejercicios de JavaScript',
       tipo: 'Práctica',
-      descripcion: 'Ejercicios prácticos para mejorar tus habilidades en JS',
+      descripcion: 'aqui encontraras ejercicios practicos para mejorar tus habilidades en JS',
       icono: '💻'
     },
     {
       id: 4,
       nombre: 'Manual de Base de Datos',
       tipo: 'PDF',
-      descripcion: 'Guía completa para diseño de bases de datos relacionales',
+      descripcion: 'Guia completa para diseño de bases de datos relacionales y no relacionales',
       icono: '🗄️'
     }
   ];

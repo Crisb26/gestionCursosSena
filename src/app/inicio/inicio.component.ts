@@ -9,7 +9,7 @@ import { PieDePaginaComponent } from '../shared/components/pie-de-pagina/pie-de-
   styleUrl: './inicio.component.scss'
 })
 export class InicioComponent {
-  mensajeBienvenida = 'Bienvenido a la plataforma de gestión de cursos del SENA';
-  numeroUsuariosActivos = 1250;
-  cursosDisponibles = 45;
+  mensajeBienvenida = 'Bienvenido a la plataforma de gestion de cursos del SENA GALAN';
+  numeroUsuariosActivos = 8754230;
+  cursosDisponibles = 3;
 }

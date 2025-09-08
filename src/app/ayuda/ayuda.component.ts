@@ -13,15 +13,15 @@ export class AyudaComponent {
   preguntasFrecuentes = [
     {
       pregunta: '¿Como puedo inscribirme en un curso?',
-      respuesta: 'Para inscribirte en un curso, debes crear una cuenta, ir a la seccion de cursos, seleccionar el curso de tu interes y hacer clic en "Inscribirse" luego correr.'
+      respuesta: 'Para inscribirte en un curso, debes crear una cuenta, ir a la seccion de cursos, seleccionar el curso de tu interes y hacer clic en "Inscribirse"...'
     },
     {
       pregunta: '¿Cuales son los requisitos para los cursos?',
-      respuesta: 'Los requisitos varian segun el curso. Generalmente necesitas tener conocimientos basicos en informatica y cumplir con la edad minima de 16 años.'
+      respuesta: 'Los requisitos varian segun el curso. Generalmente necesitas tener conocimientos basicos en informatica y cumplir con la edad minima que es de 16 años.'
     },
     {
       pregunta: '¿Como accedo a los recursos del curso?',
-      respuesta: 'Una vez inscrito en un curso, puedes acceder a los recursos desde la sección "Recursos" en tu perfil de usuario.'
+      respuesta: 'Una vez inscrito en un curso, puedes acceder a ellos desde la seccion "Recursos" en tu perfil de usuario.'
     },
     {
       pregunta: '¿Los cursos tienen certificacion?',

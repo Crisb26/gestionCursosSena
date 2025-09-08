@@ -27,13 +27,12 @@
           overflow: hidden;
           transition: transform 0.3s;
 
-          &:hover {
-            transform: translateY(-5px);
-          }
+          &:hover {transform: translateY(-5px);}
 
           .imagen-curso {
-            width: 100%;
-            height: 200px;
+            width: 90%;
+            height: 300px;
+            position: static;
             object-fit: cover;
           }
 

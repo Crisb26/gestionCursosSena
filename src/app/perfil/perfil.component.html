@@ -6,7 +6,6 @@
       <h1>Mi Perfil</h1>
       
       <div class="contenido-perfil">
-        <!-- Informacion Personal -->
         <div class="tarjeta-seccion">
           <div class="encabezado-seccion">
             <h2>Información Personal</h2>
@@ -15,7 +14,7 @@
               *ngIf="!modoEdicion"
               (click)="activarEdicion()"
             >
-              ✏️ Editar
+            Editar
             </button>
           </div>
 
@@ -39,7 +38,7 @@
             </div>
 
             <div class="campo-datos">
-              <label>Email:</label>
+              <label>Correo Electronico:</label>
               <input 
                 type="email" 
                 [(ngModel)]="perfilUsuario.email"
@@ -48,7 +47,7 @@
             </div>
 
             <div class="campo-datos">
-              <label>Documento:</label>
+              <label>Documento de Identidad:</label>
               <input 
                 type="text" 
                 [(ngModel)]="perfilUsuario.documento"
@@ -57,7 +56,7 @@
             </div>
 
             <div class="campo-datos">
-              <label>Teléfono:</label>
+              <label>Telefono:</label>
               <input 
                 type="tel" 
                 [(ngModel)]="perfilUsuario.telefono"
@@ -77,15 +76,13 @@
 
           <div class="botones-edicion" *ngIf="modoEdicion">
             <button class="boton-guardar" (click)="guardarCambios()">
-              💾 Guardar
+            Guardar
             </button>
             <button class="boton-cancelar" (click)="cancelarEdicion()">
-              ❌ Cancelar
+            Cancelar
             </button>
           </div>
         </div>
-
-        <!-- todos los cursos inscritos -->
         <div class="tarjeta-seccion">
           <h2>Mis Cursos</h2>
           

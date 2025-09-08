@@ -22,21 +22,21 @@ export class PerfilComponent {
 
   cursosInscritos = [
     {
-      nombre: 'Base de Datos Relacional y no Relacional',
-      progreso: 75,
-      estado: 'En progreso',
-      fechaInicio: '2025-09-01'
-    },
-    {
-      nombre: 'Enfermeria',
+      nombre: 'Desarrollo Web Frontend',
       progreso: 100,
       estado: 'Completado',
-      fechaInicio: '2010-03-01'
+      fechaInicio: '2024-06-01'
     },
     {
-      nombre: 'Análisis y Desarrollo de Software',
-      progreso: 30,
+      nombre: 'Analisis y Desarrollo de Software',
+      progreso: 75,
       estado: 'En progreso',
+      fechaInicio: '2024-06-01'
+    },
+    {
+      nombre: 'Bases de Datos',
+      progreso: 100,
+      estado: 'Completado',
       fechaInicio: '2024-06-01'
     }
   ];
@@ -50,11 +50,9 @@ export class PerfilComponent {
   guardarCambios() {
     this.modoEdicion = false;
     console.log('Perfil actualizado:', this.perfilUsuario);
-    // en este iria la logica para guardar en el servidor
   }
 
   cancelarEdicion() {
     this.modoEdicion = false;
-    //aqui se podria recargar los datos originales del servidor
   }
 }

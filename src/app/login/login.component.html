@@ -5,13 +5,13 @@
     <div class="contenedor-login">
       <div class="tarjeta-login">
         <div class="encabezado-login">
-          <h1>Iniciar Sesión</h1>
-          <p>Accede a tu cuenta del SENA</p>
+          <h1>Inicio de Sesion</h1>
+          <p>pon tu correo del sena y accede a tu cuenta</p>
         </div>
 
         <form class="formulario-login" (ngSubmit)="iniciarSesion()">
           <div class="grupo-campo">
-            <label for="email">Correo Electrónico</label>
+            <label for="email">Correo Electronico</label>
             <input 
               type="email" 
               id="email"
@@ -29,7 +29,7 @@
               id="contrasena"
               name="contrasena"
               [(ngModel)]="datosUsuario.contrasena"
-              placeholder="Tu contraseña"
+              placeholder="Tu contraseña de Sena Sofia Plus"
               required
             >
           </div>
@@ -44,7 +44,7 @@
               class="boton-login"
               [disabled]="cargando"
             >
-              <span *ngIf="!cargando">Iniciar Sesión</span>
+              <span *ngIf="!cargando">Iniciar Sesion</span>
               <span *ngIf="cargando">Verificando...</span>
             </button>
 
@@ -58,8 +58,8 @@
           </div>
 
           <div class="enlaces-adicionales">
-            <a href="#recuperar">¿Olvidaste tu contraseña?</a>
-            <a routerLink="/perfil">¿No tienes cuenta? Regístrate</a>
+            <a href="#recuperar">¿Haz olvidado tu contraseña?</a>
+            <a routerLink="/perfil">¿No tienes cuenta?... Registrate</a>
           </div>
         </form>
       </div>
