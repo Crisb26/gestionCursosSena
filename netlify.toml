@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/gestion-cursos-sena"
+  publish = "dist/gestion-cursos-sena/browser"
   command = "npm run build"
 
 [[redirects]]
